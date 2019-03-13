@@ -1,0 +1,604 @@
+<!-- DOCUMENT TYPE -->
+<!DOCTYPE html>
+<!-- LANGUAGE and doctype -->
+<html lang="en-US">
+<!-- METADATA -->
+<head>
+<title>Project 2</title>
+<!-- CSS LINK -->
+<link rel="stylesheet" type="text/css" href="project2style.css">
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+
+//3-way slideshow- by Suzanne Arnold (http://jandr.com/, suzanne@mail.jandr.com)
+//Script featured on JavaScript Kit (http://javascriptkit.com)
+//Credit must stay intact
+
+var Onerotate_delay = 2000; // delay in milliseconds (5000 = 5 secs)
+Onecurrent = 0;
+
+function Onenext() {
+if (document.Oneslideform.Oneslide[Onecurrent+1]) {
+document.images.Oneshow.src = document.Oneslideform.Oneslide[Onecurrent+1].value;
+document.Oneslideform.Oneslide.selectedIndex = ++Onecurrent;
+   }
+else Onefirst();
+}
+function Oneprevious() {
+if (Onecurrent-1 >= 0) {
+document.images.Oneshow.src = document.Oneslideform.Oneslide[Onecurrent-1].value;
+document.Oneslideform.Oneslide.selectedIndex = --Onecurrent;
+   }
+else Onelast();
+}
+function Onefirst() {
+Onecurrent = 0;
+document.images.Oneshow.src = document.Oneslideform.Oneslide[0].value;
+document.Oneslideform.Oneslide.selectedIndex = 0;
+}
+function Onelast() {
+Onecurrent = document.Oneslideform.Oneslide.length-1;
+document.images.Oneshow.src = document.Oneslideform.Oneslide[Onecurrent].value;
+document.Oneslideform.Oneslide.selectedIndex = Onecurrent;
+}
+function Oneap(text) {
+document.Oneslideform.Oneslidebutton.value = (text == "Stop") ? "Start" : "Stop";
+Onerotate();
+}
+function Onechange() {
+Onecurrent = document.Oneslideform.Oneslide.selectedIndex;
+document.images.Oneshow.src = document.Oneslideform.Oneslide[Onecurrent].value;
+}
+function Onerotate() {
+if (document.Oneslideform.Oneslidebutton.value == "Stop") {
+Onecurrent = (Onecurrent == document.Oneslideform.Oneslide.length-1) ? 0 : Onecurrent+1;
+document.images.Oneshow.src = document.Oneslideform.Oneslide[Onecurrent].value;
+document.Oneslideform.Oneslide.selectedIndex = Onecurrent;
+window.setTimeout("Onerotate()", Onerotate_delay);
+}
+}
+function Onetransport(){
+window.location=OneLinks[Onecurrent]
+}
+//  End -->
+
+</SCRIPT>
+
+</head>
+<!-- META CHARSET FOR HTML5 -->
+<meta charset="UTF-8">
+<!-- describe your site -->
+<meta name="description" content="website for learning html">
+<!-- enter keywords for site -->
+<meta name="keywords" content="HTML, CSS, XML, JavaScript">
+<!-- add a site author -->
+<meta name="author" content="Brandon Wagar">
+<!-- refresh every 30 seconds -->
+<meta http-equiv="refresh" content="56">
+<!-- viewport width -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- BODY IS EVERYTHING DISPLAYED ON BROWSER -->
+<body>
+
+<!-- NAV -->
+<nav>
+<ul>
+
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+</nav>
+
+<div id="container" class="container">
+
+<!-- NY PHOTO BIG -->
+<img id="nyphoto" src="media/NYDuotone.png" alt="NYC">
+
+<div class="headline">
+	<h1>ABOUT</h1>
+</div>
+
+<!-- BOXES 33.3% -->
+<div class="clearfix">
+
+<div class="box3">
+	<img id="mininyc3" src="media/NYDuotone.png" alt="mininyc3">
+
+	<img id="mininyc3" src="media/NYDuotone.png" alt="mininyc3">
+
+	<img id="mininyc3" src="media/NYDuotone.png" alt="mininyc3">
+
+	<img id="mininyc3" src="media/NYDuotone.png" alt="mininyc3">
+</div>
+
+  <div class="box">
+  <h3>HEADING</h3>
+  <p>Some text some text some text some text..
+	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+<br>
+<button class="button3">More Info</button>
+</p>
+
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc">
+
+ <h3>HEADING</h3>
+<p>	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+</p>
+
+<iframe id="youtubevideo" src="https://www.youtube.com/embed/j2G1IUpRiPY"></iframe>
+
+ <h3>HEADING</h3>
+<p>	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+<br>
+<button class="button3">More Info</button>
+</p>
+
+  </div>
+
+<div class="headline">
+	<h1>RECENT NEWS</h1>
+</div>
+
+
+<div class="box4">
+	<script language="javascript">
+<!--
+// fill the month table with column headings
+function day_title(day_name){
+     document.write("<TD ALIGN=center WIDTH=35>"+day_name+"</TD>")
+}
+// fills the month table with numbers
+function fill_table(month,month_length)
+{ 
+  day=1
+  // begin the new month table
+  document.write("<TABLE BORDER=3 CELLSPACING=3 CELLPADDING=%3><TR>")
+  document.write("<TD COLSPAN=7 ALIGN=center><B>"+month+"   "+year+"</B><TR>")
+  // column headings
+  day_title("Sun")
+  day_title("Mon")
+  day_title("Tue")
+  day_title("Wed")
+  day_title("Thu")
+  day_title("Fri")
+  day_title("Sat")
+  // pad cells before first day of month
+  document.write("</TR><TR>")
+  for (var i=1;i<start_day;i++){
+        document.write("<TD>")
+  }
+  // fill the first week of days
+  for (var i=start_day;i<8;i++){
+        document.write("<TD ALIGN=center>"+day+"</TD>")
+        day++
+  }
+  document.write("<TR>")
+  // fill the remaining weeks
+  while (day <= month_length) {
+     for (var i=1;i<=7 && day<=month_length;i++){
+         document.write("<TD ALIGN=center>"+day+"</TD>")
+         day++
+     }
+     document.write("</TR><TR>")
+     // the first day of the next month
+     start_day=i
+  }
+  document.write("</TR></TABLE><BR>")
+}
+// end hiding -->
+
+</script>
+
+<script language="javascript">
+
+// CAHNGE the below variable to the CURRENT YEAR
+year=2008
+
+// first day of the week of the new year
+today= new Date("January 1, "+year)
+start_day = today.getDay() + 1   // starts with 0
+fill_table("January",31)
+fill_table("February",29)
+fill_table("March",31)
+fill_table("April",30)
+fill_table("May",31)
+fill_table("June",30)
+fill_table("July",31)
+fill_table("August",31)
+fill_table("September",30)
+fill_table("October",31)
+fill_table("November",30)
+fill_table("December",31)
+</script>
+</div>
+
+  <div class="box2">
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc2">
+
+  	 <h3>HEADING</h3>
+<p>Some text some text some text some text..
+	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+<br>
+<button class="button3">More Info</button>
+</p>
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc2">
+
+  	 <h3>HEADING</h3>
+<p>Some text some text some text some text..
+	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+<br>
+<button class="button3">More Info</button>
+</p>
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc2">
+
+  	 <h3>HEADING</h3>
+<p>Some text some text some text some text..
+	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+<br>
+<button class="button3">More Info</button>
+</p>
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc2">
+
+  	 <h3>HEADING</h3>
+<p>Some text some text some text some text..
+	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+<br>
+<button class="button3">More Info</button>
+</p>
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc2">
+
+ <h3>HEADING</h3>
+<p>	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+</p>
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc2">
+
+ <h3>HEADING</h3>
+<p>	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+<br>
+<button class="button4">More Info</button>
+</p>
+
+  </div>
+
+<div class="headline">
+	<h1>CONTACT</h1>
+</div>
+
+<div class="box3">
+	<img id="mininyc3" src="media/NYDuotone.png" alt="mininyc3">
+
+	<img id="mininyc3" src="media/NYDuotone.png" alt="mininyc3">
+
+	<img id="mininyc3" src="media/NYDuotone.png" alt="mininyc3">
+
+	<img id="mininyc3" src="media/NYDuotone.png" alt="mininyc3">
+</div>
+
+  <div class="box">
+
+  	<TABLE border="0" cellspacing="0" cellpadding="0">
+  <TR>
+    <TD>
+      <form name="Oneslideform" >
+        <DIV align="center">
+          <TABLE width="150" border="1" cellspacing="0" cellpadding="4" bordercolor="white">
+            <TR>
+              <TD bgcolor="#4B007C">
+                <DIV align="center"><B><FONT color="white">Image Slideshow</FONT></B></DIV>
+              </TD>
+            </TR>
+            <TR>
+              <TD bgcolor="#4B007C">
+                <DIV align="center"><A href="javascript:Onetransport()"><IMG src="slideimage1.gif" width="90" height="90" name="Oneshow" border="0"></A></DIV>
+              </TD>
+            </TR>
+            <TR>
+              <TD bgcolor="#4B007C">
+                <DIV align="center">
+                  <SELECT name="Oneslide" onChange="Onechange();">
+                    <OPTION value="media/analysis-analytics-charts-669610.jpg"  selected>Random Image</OPTION>
+                    <OPTION value="media/liquidGIF.gif">Enter Page Gif</OPTION>
+                    <OPTION value="media/NYDuotone.png">Duotone Image</OPTION>
+                  </SELECT>
+      </DIV>
+              </TD>
+            </TR>
+            <TR>
+              <TD bgcolor="#4B007C">
+                <DIV align="center">
+                  <INPUT type=button onClick="Oneprevious();" value="<<" title="Previous">
+                  <INPUT type=button name="Oneslidebutton" onClick="Oneap(this.value);" value="Start" title="AutoPlay">
+                  <INPUT type=button onClick="Onenext();" value=">>" title="Next">
+          </DIV>
+              </TD>
+            </TR>
+          </TABLE>
+        </DIV>
+      </form>
+    </TD>
+  </TR>
+</TABLE>
+  	 <h3>HEADING</h3>
+<p>Some text some text some text some text..
+	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+<br>
+<button class="button4">More Info</button>
+</p>
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc">
+
+ <h3>HEADING</h3>
+<p>	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+</p>
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc">
+
+ <h3>HEADING</h3>
+<p>	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+</p>
+  </div>
+
+
+<div class="headline">
+	<h1>ABOUT</h1>
+</div>
+
+  <div class="box2">
+  	<img src="media/NYDuotone.png" alt="NYC" id="mininyc2">
+  	 <h3>HEADING</h3>
+<p>Some text some text some text some text..
+	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+<br>
+<button class="button3">More Info</button>
+</p>
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc2">
+
+ <h3>HEADING</h3>
+<p>	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+</p>
+
+<img src="media/NYDuotone.png" alt="NYC" id="mininyc2">
+
+ <h3>HEADING</h3>
+<p>	Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+Some text some text some text some text..
+<br>
+<button class="button3">More Info</button>
+</p>
+
+  </div>
+
+</div>
+
+</div>
+
+
+</body>
+</html>
